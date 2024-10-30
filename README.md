@@ -1,4 +1,4 @@
-### Vader's Vault
+# Vader's Vault
 
 Vader's Vault es un e-commerce realizado para el curso Front-End JS de Talento Tech. El e-commercer está inspirado en Star Wars. 
 
