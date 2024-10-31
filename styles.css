@@ -15,7 +15,7 @@ body {
 }
 
 .review-body {
-    background-image: url("/public/assets/imgs/Stormtrooper_Corps.jpg");
+    background-image: url("assets/imgs/Stormtrooper_Corps.jpg");
     background-color: transparent;
 }
 
