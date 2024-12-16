@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vader's Vault</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/imgs/favicon-32x32.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="styles.css" />
+
+
+  </head>
+  <body>
+    <header class="bg-dark text-white p-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <img
+            src="assets/imgs/helmetpng.png"
+            alt="Vader's Vault Logo"
+            class="logo"
+            />
+            <a href="index.html" class="text-white text-decoration-none">
+              <h1 href="index.html" class="mb-0 store-title">Vader's Vault</h1>
+            </a>
+          </div>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link text-white">Inicio</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a href="productos.html" class="nav-link text-white">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a href="reviews.html" class="nav-link text-white">Reseñas</a>
+            </li>
+            <li class="nav-item">
+              <a href="contacto.html" class="nav-link text-white">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+<main class="contact my-5">
+    <h3 class="text-center mb-4">Contacta al Emperador</h3>
+    <form
+    id="contactoForm"
+    action="https://formspree.io/f/xzzbzyob"
+    method="POST"
+    class="bg-dark text-white p-4 rounded"
+    >
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="_replyto"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="message">Mensaje</label>
+        <textarea
+          class="form-control"
+          id="message"
+          name="message"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-danger">Enviar</button>
+    </form>
+</main>
+<footer class="bg-dark text-white text-center p-3">
+    <p>
+      &copy; 2024 Vader's Vault. Todos los derechos reservados. Que el Lado Oscuro te acompañe.
+    </p>
+  </footer>
+
+  <script src="contacto.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("contactoForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+
+      const feedback = document.createElement("div");
+      feedback.innerHTML = `<h4>El Emperador se pondrá en contacto contigo, ${name}!</h4>`;
+
+      document.getElementById("contactoForm").appendChild(feedback);
+
+      setTimeout(() => {
+        document.getElementById("contactoForm").removeChild(feedback);
+      }, 2000);
+
+      event.target.reset();
+    });
+});
+  </script>  -->
+</body>
+</html>
