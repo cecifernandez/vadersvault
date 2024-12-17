@@ -12,7 +12,6 @@ fetch("productos.json")
   })
   .catch((error) => console.error("Error fetching products:", error));
 
-// Mostrar productos
 function displayProducts(products) {
   productContainer.innerHTML = "";
   products.forEach((product) => {
@@ -32,22 +31,20 @@ function displayProducts(products) {
   });
 }
 
-// Agregar producto al carrito
 function addToCart(productId) {
   const product = products.find((p) => p.id === productId);
   const cartItem = cartItems.find((item) => item.id === productId);
 
   if (cartItem) {
-    cartItem.quantity += 1; // Incrementar cantidad si ya está en el carrito
+    cartItem.quantity += 1; 
   } else {
-    cartItems.push({ ...product, quantity: 1 }); // Agregar nuevo producto
+    cartItems.push({ ...product, quantity: 1 });
   }
 
   updateCart();
   saveCartToLocalStorage();
 }
 
-// Actualizar carrito
 function updateCart() {
   cartContainer.innerHTML = "";
 
@@ -76,19 +73,16 @@ function updateCart() {
   cartContainer.insertAdjacentHTML("beforeend", totalHTML);
 }
 
-// Guardar carrito en localStorage
 function saveCartToLocalStorage() {
   localStorage.setItem("cart", JSON.stringify(cartItems));
 }
 
-// Eliminar producto del carrito
 function removeFromCart(index) {
   cartItems.splice(index, 1);
   updateCart();
   saveCartToLocalStorage();
 }
 
-// Editar cantidad
 function editQuantity(index, delta) {
   const item = cartItems[index];
   item.quantity += delta;
