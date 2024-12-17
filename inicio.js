@@ -1,7 +1,5 @@
-// Seleccionar el contenedor de productos
 const productsContainer = document.querySelector(".row");
 
-// Obtener y mostrar los productos
 fetch("productos.json")
   .then((response) => {
     if (!response.ok) {
@@ -10,13 +8,11 @@ fetch("productos.json")
     return response.json();
   })
   .then((products) => {
-    // Selecciona solo los tres primeros productos
     const selectedProducts = products.slice(0, 3);
     displayProducts(selectedProducts);
   })
   .catch((error) => console.error("Error:", error));
 
-// Función para mostrar productos en el contenedor
 function displayProducts(products) {
   products.forEach((product) => {
     const productHTML = `
